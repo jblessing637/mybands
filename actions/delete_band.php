@@ -8,6 +8,9 @@ $f = fopen('../data/bands.csv','w');
 fwrite($f, $data_string);
 fclose($f);
 //redirect to list of bands
-$SESSION['message']="That band no longer exists.";
+$SESSION['message'] = array(
+		'text'=>'What band?',
+		'type'=> 'alert'
+		);
 header('Location:../?p=list_bands');
 ?>
